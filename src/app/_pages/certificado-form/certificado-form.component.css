@@ -1,0 +1,96 @@
+.custom-card {
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-100);
+  padding: 32px;
+  max-width: 672px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: var(--blue-dark);
+  margin-bottom: 20px;
+}
+
+.activities-group {
+  margin-bottom: 32px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--blue-dark);
+}
+
+.item-list {
+  width: 100%;
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
+  padding: 16px;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-list hr {
+  all: unset;
+  margin: 12px 0;
+  display: block;
+  height: 1px;
+  background-color: var(--gray-100);
+}
+
+.remove-btn i {
+  padding: 5.75px;
+  color: var(--danger-base);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.remove-btn i:hover {
+  background-color: var(--gray-100);
+  border-radius: 4px;
+  transition-duration: 200ms;
+}
+
+.custom-input {
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.custom-input:focus {
+  border: 1px solid var(--blue-base);
+  box-shadow: none;
+}
+
+.custom-input-group:has(input:focus) label {
+  color: var(--blue-base);
+  transition-duration: 50ms;
+}
+
+.error-message {
+  gap: 4px;
+  color: var(--danger-dark);
+  margin-top: 8px;
+}
+
+.error-message p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.custom-input-group:has(.error-message)>label {
+  color: var(--danger-dark);
+}
