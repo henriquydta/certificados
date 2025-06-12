@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
 .menu-certificado {
   max-width: 800px;
 }
@@ -37,10 +39,90 @@
   height: 470px;
   background-color: var(--white);
   border-radius: 8px;
+  position: relative;
+}
+
+.conteudo-certificado p {
+  margin: 0;
 }
 
 .icone-medalha {
+  z-index: 1;
   position: absolute;
   top: 12px;
   left: 12px;
+}
+
+.info-certificado {
+  margin: 64px 40px auto 40px;
+  gap: 20px;
+}
+
+.titulos-certificado h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: 2.5px;
+  color: var(--blue-dark);
+}
+
+.titulos-certificado p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--gray-300);
+}
+
+.nome-aluno {
+  font-family: "Imperial Script";
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 80px;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--blue-base);
+}
+
+.lista-atividades-group {
+  width: 413.7px;
+}
+
+.lista-atividades-titulo {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--gray-300);
+  margin-bottom: 8px !important;
+}
+
+.lista-atividades {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--gray-300);
+}
+
+.data-emissao {
+  color: var(--gray-300);
+  font-weight: 700;
+  font-size: 11.2px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.icone-assinatura {
+  position: absolute;
+  right: 40px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
 }
