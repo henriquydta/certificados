@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-logo">
+      <img src="navbar/logo.svg" alt="Logo do site">
+    </a>
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        <li routerLink="/" class="nav-item d-flex align-items-center">
+          <i class="ph ph-medal" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"></i>
+          <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Lista
+            de Certificados</a>
+        </li>
+        <li routerLink="/certificados/gerar" class="nav-item d-flex align-items-center">
+          <i class="ph ph-circles-three-plus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"></i>
+          <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Gerar
+            Certificado</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,59 +1,70 @@
-# Certificados
+# Sistema de Certificados
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14.
+Um sistema web simples para gerenciar e visualizar certificados digitais, para aprendizado de conceitos iniciais e mais básicos do Angular.
 
-## Development server
+## ⚙ Tecnologias
 
-To start a local development server, run:
+### Ferramentas
+[![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
+[![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![Phosphor Icons](https://img.shields.io/badge/phosphor_icons-3C402B?style=for-the-badge&logo=phosphoricons&logoColor=white)](https://phosphoricons.com)
 
-```bash
-ng serve
-```
+### Linguagens
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/css3-663399.svg?style=for-the-badge&logo=css&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚠ Pré-requisitos
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Certifique-se de ter instalado o [Node.js](https://nodejs.org/) e o gerenciador de pacotes [npm](https://www.npmjs.com/). 
+- Depois, execute o seguinte comando para instalar o CLI do [Angular](https://angular.dev/tools/cli/).
 
 ```bash
-ng generate --help
+npm install -g @angular/cli
 ```
 
-## Building
+## ▶️ Execução
 
-To build the project run:
+1. **Clone o repositório**
+```bash
+git clone https://github.com/henriquydta/certificados.git
+cd certificados
+```
 
+2. **Instale as dependências**
+```bash
+npm install
+```
+
+3. **Gere o build do projeto (opcional)**
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+4. **Execute o projeto**
 ```bash
-ng test
+ng serve
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+5. **Acesse no navegador**
+```
+http://localhost:4200
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🤝 Contribuição
 
-## Additional Resources
+Este projeto foi criado com fins de aprendizado e um escopo pequeno, mas se realmente tiver interesse, contribuições são sempre bem-vindas! Qualquer melhoria, correção ou nova funcionalidade será apreciada.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+### Licença
+
+Projeto sob licença [MIT](LICENSE).
+
+### Autor
+- GitHub: [@henriquydta](https://github.com/henriquydta)
+- Email: henriquydta@gmail.com
+
+---
+
+⭐ Se este projeto te ajudou de alguma forma, dê uma estrela! 😄
