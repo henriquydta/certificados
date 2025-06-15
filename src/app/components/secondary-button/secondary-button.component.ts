@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './secondary-button.component.css'
 })
 export class SecondaryButtonComponent {
-  @Input() textoBotao: string = 'Botão Secundário';
-  @Input() phClass: string = 'ph ph-plus';
-  @Input() disabled: boolean = false;
+  @Input() textoBotao = 'Botão Secundário';
+  @Input() phClass = 'ph ph-plus';
+  @Input() disabled = false;
 }

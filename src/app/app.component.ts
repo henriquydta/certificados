@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { BaseUiComponent } from "./components/base-ui/base-ui.component";
 import { RouterOutlet } from '@angular/router';
@@ -11,9 +11,9 @@ import { CertificadoService } from './services/certificado.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'certificados';
+  private certificadoService = inject(CertificadoService);
 
-  constructor(private certificadoService: CertificadoService) { }
+  title = 'certificados';
 
   ngOnInit(): void {
     const certificados = localStorage.getItem('certificados');

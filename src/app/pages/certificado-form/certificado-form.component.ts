@@ -1,7 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SecondaryButtonComponent } from "../../components/secondary-button/secondary-button.component";
 import { PrimaryButtonComponent } from "../../components/primary-button/primary-button.component";
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Certificado } from '../../interfaces/certificado';
 import { CertificadoService } from '../../services/certificado.service';
@@ -15,9 +15,11 @@ import { Router } from '@angular/router';
   styleUrl: './certificado-form.component.css'
 })
 export class CertificadoFormComponent {
-  constructor(private certificadoService: CertificadoService, private router: Router) { }
+  private certificadoService = inject(CertificadoService);
+  private router = inject(Router);
 
-  atividade: string = '';
+
+  atividade = '';
   certificado: Certificado = {
     id: '',
     nome: '',

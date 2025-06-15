@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './primary-button.component.css'
 })
 export class PrimaryButtonComponent {
-  @Input() textoBotao: string = 'Botão Primário'
-  @Input() disabled: boolean = false;
+  @Input() textoBotao = 'Botão Primário'
+  @Input() disabled = false;
 }
