@@ -2,6 +2,7 @@
 
 Um sistema web simples para gerenciar e visualizar certificados digitais, para aprendizado de conceitos iniciais e mais básicos do Angular.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/189dc568-9eb8-4acf-8471-1a80d4140135/deploy-status)](https://app.netlify.com/projects/certificados-henry/deploys)
 ## ⚙ Tecnologias
 
 ### Ferramentas
