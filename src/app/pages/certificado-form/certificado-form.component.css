@@ -49,17 +49,33 @@ label {
   background-color: var(--gray-100);
 }
 
-.remove-btn i {
+.remove-btn {
+  background: none;
+  border: none;
   padding: 5.75px;
-  color: var(--danger-base);
-  font-size: 12.5px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 200ms ease;
 }
 
-.remove-btn i:hover {
+.remove-btn:hover,
+.remove-btn:focus {
   background-color: var(--gray-100);
-  border-radius: 4px;
-  transition-duration: 200ms;
+  outline: none;
+}
+
+.remove-btn:focus-visible {
+  outline: 2px solid var(--gray-300);
+  outline-offset: 2px;
+}
+
+.remove-btn i {
+  color: var(--danger-base);
+  font-size: 12.5px;
+  pointer-events: none;
 }
 
 .custom-input {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { SecondaryButtonComponent } from "../../components/secondary-button/secondary-button.component";
 import { CertificadoService } from '../../services/certificado.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -12,16 +12,19 @@ import html2canvas from 'html2canvas';
   styleUrl: './certificado.component.css'
 })
 export class CertificadoComponent implements OnInit {
+  private certificadoService = inject(CertificadoService);
+  private route = inject(ActivatedRoute);
+
   id: string | null = null;
   certificado: Certificado | undefined;
-  @Input() nome: string = '';
-  @Input() dataEmissao: string = '';
-  @Input() atividades: string = '';
-  isOneActivity: boolean = false;
+  @Input() nome = '';
+  @Input() dataEmissao = '';
+  @Input() atividades = '';
+  isOneActivity = false;
 
   @ViewChild('certificadoContainer') certificadoElement!: ElementRef;
 
-  constructor(private certificadoService: CertificadoService, private route: ActivatedRoute) {
+  constructor() {
     this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
       this.certificado = this.certificadoService.certificados.find(item => item.id == this.id);

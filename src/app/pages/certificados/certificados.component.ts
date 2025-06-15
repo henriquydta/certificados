@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ItemCertificadoComponent } from '../../components/item-certificado/item-certificado.component';
 import { SecondaryButtonComponent } from '../../components/secondary-button/secondary-button.component';
 import { Certificado } from '../../interfaces/certificado';
@@ -11,10 +11,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })
-export class CertificadosComponent {
-  certificados: Certificado[] = [];
+export class CertificadosComponent implements OnInit {
+  private certificadoService = inject(CertificadoService);
 
-  constructor(private certificadoService: CertificadoService) { }
+  certificados: Certificado[] = [];
 
   ngOnInit(): void {
     const certificados = localStorage.getItem('certificados');
