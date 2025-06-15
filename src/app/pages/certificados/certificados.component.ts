@@ -3,10 +3,11 @@ import { ItemCertificadoComponent } from '../../components/item-certificado/item
 import { SecondaryButtonComponent } from '../../components/secondary-button/secondary-button.component';
 import { Certificado } from '../../interfaces/certificado';
 import { CertificadoService } from '../../services/certificado.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-certificados',
-  // imports: [ItemCertificadoComponent, SecondaryButtonComponent],
+  imports: [ItemCertificadoComponent, SecondaryButtonComponent, RouterLink],
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })
@@ -16,8 +17,7 @@ export class CertificadosComponent {
   constructor(private certificadoService: CertificadoService) { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-
+    const certificados = localStorage.getItem('certificados');
+    this.certificados = certificados ? JSON.parse(certificados) : [];
   }
 }

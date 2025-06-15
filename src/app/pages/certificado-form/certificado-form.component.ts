@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Certificado } from '../../interfaces/certificado';
 import { CertificadoService } from '../../services/certificado.service';
 import { v4 as uuidv4 } from 'uuid';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-certificado-form',
@@ -14,9 +15,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrl: './certificado-form.component.css'
 })
 export class CertificadoFormComponent {
-
-  constructor(private certificadoService: CertificadoService) { }
-  @ViewChild('form') form!: NgForm;
+  constructor(private certificadoService: CertificadoService, private router: Router) { }
 
   atividade: string = '';
   certificado: Certificado = {
@@ -56,8 +55,7 @@ export class CertificadoFormComponent {
     this.certificado.dataEmissao = this.dataAtual();
     this.certificadoService.adicionarCertificado(this.certificado);
 
-    this.certificado = this.certificadoEstadoInicial();
-    this.form.resetForm();
+    this.router.navigate(['certificados', this.certificado.id]);
   }
 
   dataAtual() {
@@ -67,14 +65,5 @@ export class CertificadoFormComponent {
     const ano = String(dataAtual.getFullYear());
 
     return `${dia}/${mes}/${ano}`;
-  }
-
-  certificadoEstadoInicial(): Certificado {
-    return {
-      id: '',
-      atividades: [],
-      nome: '',
-      dataEmissao: '',
-    }
   }
 }

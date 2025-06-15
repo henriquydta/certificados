@@ -4,9 +4,9 @@
       <i class="ph ph-arrow-left"></i>
       <p class="m-0">Voltar</p>
     </div>
-    <app-secondary-button [textoBotao]="'Download'" [phClass]="'ph ph-download-simple'"></app-secondary-button>
+    <app-secondary-button (click)="downloadCertificado()" [textoBotao]="'Download'" [phClass]="'ph ph-download-simple'"></app-secondary-button>
   </div>
-  <div class="certificado d-flex justify-content-center align-items-center">
+  <div #certificadoContainer class="certificado d-flex justify-content-center align-items-center">
     <img class="icone-medalha" src="cert-image/certificateRibbon.svg" alt="Ícone de Medalha">
     <div class="conteudo-certificado">
       <img class="icone-assinatura" src="cert-image/certificateSignature.svg" alt="Ícone de Assinatura">
@@ -15,16 +15,21 @@
           <h1>CERTIFICADO DE CONCLUSÃO</h1>
           <p>Este certificado comprova que</p>
         </div>
-        <p class="nome-aluno">Nome do Aluno</p>
-        <div class="lista-atividades-group"> <!---->
-          <p class="lista-atividades-titulo">Concluiu com sucesso as seguintes atividades</p>
+        <p class="nome-aluno">{{nome}}</p>
+        <div class="lista-atividades-group">
+          <p class="lista-atividades-titulo">
+            @if (isOneActivity) {
+            Concluiu com sucesso a seguinte atividade
+            }
+            @else {
+            Concluiu com sucesso as seguintes atividades
+            }
+          </p>
           <p class="lista-atividades">
-            Introdução ao Angular, Configuração com Angular CLI, Criação de componentes reutilizáveis,
-            Manipulação de dados, Implementação de data binding, Criação de rotas com Angular Router,
-            Consumo de APIs REST
+            {{atividades}}
           </p>
         </div>
-        <p class="data-emissao">Emitido em: 09/06/2025</p>
+        <p class="data-emissao">Emitido em: {{dataEmissao}}</p>
       </div>
     </div>
   </div>
